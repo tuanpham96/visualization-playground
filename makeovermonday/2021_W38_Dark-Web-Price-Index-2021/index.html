@@ -63,7 +63,7 @@
                 };
             }
 
-            d3.csv('/data/darkwebpriceindex2021.csv')
+            d3.csv('./data/darkwebpriceindex2021.csv')
             .then(function(rows) {
                 var cf = crossfilter(rows),
                     catDim = cf.dimension(d => d.Category),
