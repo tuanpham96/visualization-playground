@@ -1,29 +1,32 @@
-import os
-
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+from dash.dependencies import Input, Output
+import plotly.express as px
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+df = px.data.gapminder()
+all_continents = df.continent.unique()
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
-server = app.server
+app = dash.Dash(__name__)
 
 app.layout = html.Div([
-    html.H2('Hello World'),
-    dcc.Dropdown(
-        id='dropdown',
-        options=[{'label': i, 'value': i} for i in ['LA', 'NYC', 'MTL']],
-        value='LA'
+    dcc.Checklist(
+        id="checklist",
+        options=[{"label": x, "value": x} 
+                 for x in all_continents],
+        value=all_continents[3:],
+        labelStyle={'display': 'inline-block'}
     ),
-    html.Div(id='display-value')
+    dcc.Graph(id="line-chart"),
 ])
 
-@app.callback(dash.dependencies.Output('display-value', 'children'),
-                [dash.dependencies.Input('dropdown', 'value')])
-def display_value(value):
-    return 'You have selected "{}"'.format(value)
+@app.callback(
+    Output("line-chart", "figure"), 
+    [Input("checklist", "value")])
+def update_line_chart(continents):
+    mask = df.continent.isin(continents)
+    fig = px.line(df[mask], 
+        x="year", y="lifeExp", color='country')
+    return fig
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+app.run_server(debug=True)
