@@ -1,0 +1,21 @@
+name: crawler
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - pip
+  - matplotlib
+  - numpy 
+  - pandas
+  - virtualenv
+  - jupyterlab 
+  - pip:
+    - requests
+    - beautifulsoup4
+    - lxml
+    - cython
+    - rich[jupyter]
+    - pyyaml
+    - termgraph # optional, for monitoring
+    - asciigraph # optional, for monitoring

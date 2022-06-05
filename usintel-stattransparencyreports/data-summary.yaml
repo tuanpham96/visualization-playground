@@ -1,0 +1,224 @@
+FISA-702:
+  num_orders:
+    description: TBD
+    comments: usually in Figure 3
+    data:
+      2013:
+        value: 1
+        source: 
+          - Report 2019, Figure 3
+          - Report 2020, Figure 3
+      2014: 
+        value: 1
+        source: 
+          - Report 2019, Figure 3
+          - Report 2020, Figure 3
+      2015:
+        value: 1
+        source: 
+          - Report 2019, Figure 3
+          - Report 2020, Figure 3
+      2016:
+        value: 0
+        source: 
+          - Report 2019, Figure 3
+          - Report 2020, Figure 3
+      2017:
+        value: 1
+        source: 
+          - Report 2019, Figure 3
+          - Report 2020, Figure 3
+      2018:
+        value: 1
+        source: 
+          - Report 2019, Figure 3
+          - Report 2020, Figure 3
+          - Report 2021, Figure 3
+      2019:
+        value: 2
+        source: 
+          - Report 2020, Figure 3
+          - Report 2021, Figure 3
+          - Report 2022, Figure 3
+      2020:
+        value: 1
+        source: 
+          - Report 2021, Figure 3
+          - Report 2022, Figure 3
+      2021:
+        value: 0
+        source: 
+          - Report 2022, Figure 3
+  num_nonUSP_targets_of_order:
+    description: TBD
+    comments: usually in Figure 4
+    data:
+      2013:
+        value: 89138
+        source: 
+          - Report 2019, Figure 4
+          - Report 2020, Figure 4
+      2014: 
+        value: 92707
+        source: 
+          - Report 2019, Figure 4
+          - Report 2020, Figure 4
+      2015:
+        value: 94368
+        source: 
+          - Report 2019, Figure 4
+          - Report 2020, Figure 4
+      2016:
+        value: 106469
+        source: 
+          - Report 2019, Figure 4
+          - Report 2020, Figure 4
+      2017:
+        value: 129080
+        source: 
+          - Report 2019, Figure 4
+          - Report 2020, Figure 4
+      2018:
+        value: 164770
+        source: 
+          - Report 2019, Figure 4
+          - Report 2020, Figure 4
+          - Report 2021, Figure 4
+      2019:
+        value: 204968
+        source: 
+          - Report 2020, Figure 4
+          - Report 2021, Figure 4
+          - Report 2022, Figure 4
+      2020:
+        value: 202723
+        source: 
+          - Report 2021, Figure 4
+          - Report 2022, Figure 4
+      2021:
+        value: 232423
+        source: 
+          - Report 2022, Figure 4
+  num_USP_content_queries:
+    description: TBD
+    comments: |
+      usually in Figure 6
+      due to the report of Priv & Civil Lib Oversight Board (PCLOB), this stat was tracked from 2015     
+      2015-2020 only include NSA, CIA, NCTC
+      NCTC included both contents and noncontents in this field?
+      only recently 2021 include FBI separately
+      content is basically unique query term
+      "excluding search terms used to prevent the return of U.S. person information"?
+      unclear difference between "content" and "noncontent"?
+    data:
+      2015:
+        value: 4672
+        source: 
+          - Report 2019, Figure 6
+          - Report 2020, Figure 6
+      2016:
+        value: 5288
+        source: 
+          - Report 2019, Figure 6
+          - Report 2020, Figure 6
+      2017:
+        value: 7512
+        source: 
+          - Report 2019, Figure 6
+          - Report 2020, Figure 6
+      2018:
+        value: 9707
+        source: 
+          - Report 2019, Figure 6 as 9637
+          - Report 2020, Figure 6 as 9637
+          - Report 2021, Figure 6 corrected as 9707
+      2019:
+        value: 9299
+        source: 
+          - Report 2020, Figure 6 as 9126
+          - Report 2021, Figure 6 corrected as 9299
+          - Report 2022, Figure 6 as 9299
+      2020:
+        value: 7218
+        source: 
+          - Report 2021, Figure 6
+          - Report 2022, Figure 6
+      2021:
+        value: 8790 
+        source: 
+          - Report 2022, Figure 6
+  num_USP_noncontent_queries:
+    description: TBD
+    comments: |
+      usually in Figure 7
+      due to the report of Priv & Civil Lib Oversight Board (PCLOB), this stat was tracked from 2015     
+      noncontent (i.e. metadata), number of queries not unique 
+      does not contain FBI queries?
+      CIA only began 2018 estimates, before CIA not reporting this
+      only NSA and CIA, no NTCT here? 
+      "excluding queries containing information used to prevent the return of U.S. person information"?
+    data:
+      2013:
+        value: 9500
+        source: 
+          - Report 2019, Figure 8
+          - Report 2020, Figure 8
+      2014:
+        value: 17500
+        source: 
+          - Report 2019, Figure 8
+          - Report 2020, Figure 8
+      2015:
+        value: 23800
+        source: 
+          - Report 2019, Figure 8
+          - Report 2020, Figure 8
+      2016:
+        value: 30355
+        source: 
+          - Report 2019, Figure 8
+          - Report 2020, Figure 8
+      2017:
+        value: 16924
+        source: 
+          - Report 2019, Figure 8
+          - Report 2020, Figure 8
+      2018:
+        value: 14307
+        source: 
+          - Report 2019, Figure 8 as 14374; CIA started reporting 
+          - Report 2020, Figure 8 as 14374
+          - Report 2021, Figure 8 corrected as 14307
+      2019:
+        value: 16545
+        source: 
+          - Report 2020, Figure 8 as 16692
+          - Report 2021, Figure 8 corrected as 16545
+          - Report 2022, Figure 8 as 16545
+      2020:
+        value: 9051
+        source: 
+          - Report 2021, Figure 8
+          - Report 2022, Figure 8
+      2021:
+        value: 3958 
+        source: 
+          - Report 2022, Figure 8
+  num_USP_FBI_queries:
+    description: TBD
+    comments: |
+      new in 2022, Figure 9
+      numbers reported as "Few than " <value>
+      reported period December of previous year to November of given year
+      the count method of this is non-unique, and sometimes even overcounting in compounded queries in which only a portion are USP
+      "Estimated number of U.S. Person queries of unminimized Section 702-aquired contents and noncontents for foreign intelligence information and/or evidence of a crime"
+    data:
+      2020:
+        value: 1324057 
+        source: 
+          - Report 2022, Figure 9
+      2021:
+        value: 3394053
+        source: 
+          - Report 2022, Figure 9
+

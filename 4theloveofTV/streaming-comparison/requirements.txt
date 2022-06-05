@@ -1,0 +1,6 @@
+ipython
+numpy
+pandas
+matplotlib
+scrapy
+# scrapy-user-agents
